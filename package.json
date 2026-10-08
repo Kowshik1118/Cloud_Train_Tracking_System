@@ -1,0 +1,13 @@
+{
+  "name": "cloud-train-tracking-system",
+  "version": "1.0.0",
+  "description": "Cloud-based Indian train tracking and journey planner",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.21.2"
+  }
+}

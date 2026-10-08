@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RailCloud - Train Tracking System</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">
+      <div class="logo">🚆</div>
+      <div><strong>RailCloud</strong><span>Cloud Train Tracking</span></div>
+    </div>
+    <nav>
+      <button class="nav-btn active" data-section="dashboard">Dashboard</button>
+      <button class="nav-btn" data-section="trains">All Trains</button>
+      <button class="nav-btn" data-section="favorites">Favorites</button>
+      <button class="nav-btn" data-section="stations">Stations</button>
+    </nav>
+    <button id="themeBtn" class="icon-btn" title="Toggle theme">🌙</button>
+  </header>
+
+  <main>
+    <section id="dashboard" class="section active">
+      <div class="hero">
+        <div>
+          <p class="eyebrow">LIVE RAIL NETWORK</p>
+          <h1>Track your train<br><span>across India.</span></h1>
+          <p class="hero-text">Search trains, follow routes, save favorites and monitor live-style running information from one dashboard.</p>
+          <div class="search-box">
+            <span>⌕</span>
+            <input id="mainSearch" placeholder="Search train name, number or station...">
+            <button id="searchBtn">Search</button>
+          </div>
+        </div>
+        <div class="hero-train">🚆</div>
+      </div>
+
+      <div class="stats-grid" id="stats"></div>
+
+      <div class="section-head">
+        <div><p class="eyebrow">LIVE NOW</p><h2>Running trains</h2></div>
+        <button class="text-btn" data-go="trains">View all →</button>
+      </div>
+      <div id="featuredTrains" class="train-grid"></div>
+    </section>
+
+    <section id="trains" class="section">
+      <div class="section-head">
+        <div><p class="eyebrow">NETWORK</p><h2>All trains</h2></div>
+        <div class="filters">
+          <select id="typeFilter"><option value="">All types</option><option>Rajdhani</option><option>Shatabdi</option><option>Duronto</option><option>Superfast</option></select>
+          <select id="statusFilter"><option value="">All status</option><option>Running</option><option>On Time</option><option>Delayed</option></select>
+        </div>
+      </div>
+      <div id="allTrains" class="train-grid"></div>
+    </section>
+
+    <section id="favorites" class="section">
+      <div class="section-head">
+        <div><p class="eyebrow">YOUR LIST</p><h2>Favorite trains</h2></div>
+      </div>
+      <div id="favoriteTrains" class="train-grid"></div>
+    </section>
+
+    <section id="stations" class="section">
+      <div class="section-head">
+        <div><p class="eyebrow">STATION DIRECTORY</p><h2>Major stations</h2></div>
+        <input class="station-search" id="stationSearch" placeholder="Search station...">
+      </div>
+      <div id="stationGrid" class="station-grid"></div>
+    </section>
+  </main>
+
+  <div id="modal" class="modal hidden">
+    <div class="modal-card">
+      <button class="close" id="closeModal">×</button>
+      <div id="modalContent"></div>
+    </div>
+  </div>
+
+  <footer>
+    <strong>RailCloud</strong> · Cloud-Based Train Tracking System
+    <span>Demo data for academic project · Real train names used</span>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
