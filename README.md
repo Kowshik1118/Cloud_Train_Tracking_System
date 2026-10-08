@@ -1,5 +1,5 @@
 # 🚆 RailCloud - Cloud-Based Train Tracking System
-http://localhost:10000
+https://cloud-train-tracking-system.onrender.com
 A beginner-friendly academic project built with **HTML, CSS, JavaScript and Node.js/Express**.
 
 ## Features
@@ -69,7 +69,8 @@ npm install
 npm start
 ```
 
-7. Open: http://localhost:10000
+7. Open:
+8. https://cloud-train-tracking-system.onrender.com
 
 ```text
 http://localhost:5000
